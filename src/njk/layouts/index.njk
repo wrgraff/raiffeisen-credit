@@ -1,0 +1,57 @@
+{% set domain = 'https://frontend-design.ru/' %}
+{% set template = '' %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}" />
+    <meta name="keywords" content="{{ keywords }}" />
+
+    <link rel="stylesheet" href="{{ template }}/css/style.css">
+    <link rel="icon" href="{{ template }}/img/favicons/base-16x16.png" sizes="16x16">
+    <link rel="icon" href="{{ template }}/img/favicons/base-24x24.png" sizes="32x32">
+    <link rel="icon" href="{{ template }}/img/favicons/base-32x32.png" sizes="32x32">
+    <link rel="icon" href="{{ template }}/img/favicons/base-64x64.png" sizes="64x64">
+
+    <!-- iOS -->
+    <meta name="apple-mobile-web-app-title" content="Фитнес-клуб Olympic Touch">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ template }}/img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ template }}/img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ template }}/img/favicons/apple-touch-icon-180x180.png">
+    <!-- og -->
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:description" content="{{ description }}" />
+    <meta property="og:image" content="{{ template }}/img/favicons/og.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="{{ description }}" />
+    {% if activePage == '/' %}
+        <meta property="og:url" content="{{ domain }}" />
+    {% else %}
+        <meta property="og:url" content="{{ domain }}/{{ activePage }}/" />
+    {% endif %}
+    <meta property="og:locale" content="ru_RU" />
+</head>
+
+<body class="page">
+    <header class="page__header page-header">
+        {% include "blocks/page-header.njk" %}
+    </header>
+
+    <main class="page__main page-main">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="page__footer page-footer">
+        {% include "blocks/page-footer.njk" %}
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/scripts.js"></script>
+</body>
+<!-- Developed by Artur Trifonov frontend-design.ru -->
+</html>

@@ -1,0 +1,37 @@
+{
+    "private": "true",
+    "scripts": {
+        "stylelint": "stylelint \"src/scss/**/*.scss\" --syntax scss",
+        "editorconfig": "editorconfig-checker --exclude '.git|node_modules|.DS_Store'",
+        "test": "npm run stylelint && npm run editorconfig",
+        "build": "gulp build",
+        "start": "gulp start"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.10.2",
+        "@babel/preset-env": "^7.10.2",
+        "autoprefixer": "^9.8.0",
+        "browser-sync": "^2.26.7",
+        "del": "^5.1.0",
+        "editorconfig-checker": "^3.1.0",
+        "gulp": "^4.0.2",
+        "gulp-babel": "^8.0.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-csso": "^4.0.1",
+        "gulp-imagemin": "^7.1.0",
+        "gulp-plumber": "^1.2.1",
+        "gulp-postcss": "^8.0.0",
+        "gulp-rename": "^2.0.0",
+        "gulp-sass": "^4.1.0",
+        "gulp-typograf": "^4.0.3",
+        "gulp-uglify-es": "^2.0.0",
+        "gulp-webp": "^4.0.1",
+        "jshint": "^2.11.1",
+        "stylelint": "^13.6.0"
+    },
+    "browserslist": [
+        "last 2 version",
+        "maintained node versions",
+        "not dead"
+    ]
+}
