@@ -1,0 +1,19 @@
+.cashback__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 14px;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.cashback__item {
+    padding: 42px 142px 42px 30px;
+
+    color: $color-white;
+    background-color: $color-secondary;
+    border-radius: 14px;
+
+    font-size: 22px;
+}
