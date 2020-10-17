@@ -1,0 +1,60 @@
+.promo {
+    color: $color-white;
+    background-color: $color-secondary;
+}
+
+.promo__container {
+    max-width: $page-max-width;
+    margin: 0 auto;
+    padding: 24px 16px 0;
+}
+
+.promo__label {
+    position: relative;
+
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 12px;
+    padding: 5px 6px 5px 12px;
+
+    background-color: $color-blue;
+    border-radius: 4px 0 0 4px;
+
+    &::after {
+        content: url('../img/bg/arrow.svg');
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: calc(100% - 2px);
+    }
+
+    @include breakpoint($breakpoints-large down) {
+        &::before {
+            content: 'Обслуживание 0₽';
+        }
+    }
+}
+
+.promo__heading {
+    margin-bottom: 264px;
+}
+
+.promo__percent {
+    display: block;
+
+    font-size: 42px;
+    font-weight: 900;
+}
+
+.promo__percent-value {
+    font-size: 64px;
+}
+
+.promo__button {
+    @include breakpoint($breakpoints-large down) {
+        display: block;
+        margin: 0 -16px;
+
+        border-radius: 0;
+    }
+}

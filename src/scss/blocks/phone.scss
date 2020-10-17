@@ -1,0 +1,26 @@
+.phone__number {
+    display: block;
+
+    @include breakpoint($breakpoints-large down) {
+        width: 40px;
+        height: 40px;
+
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-image: url('../img/ico/contact.svg');
+        border-radius: 10px;
+        transition: background-color 250ms;
+
+        &:hover {
+            background-color: $color-primary;
+        }
+
+        &:focus {
+            @include outline;
+        }
+
+        &:active {
+            background-color: $color-primary-active;
+        }
+    }
+}

@@ -25,3 +25,4 @@ $unicode-ranges: (
 @include font-face($font-family, '../fonts/als-hauss', 500, normal);
 @include font-face($font-family-heading, '../fonts/navigo-regular', 400, normal);
 @include font-face($font-family-heading, '../fonts/navigo-bold', 700, normal);
+@include font-face($font-family-heading, '../fonts/navigo-black', 900, normal);

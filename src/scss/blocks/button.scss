@@ -1,0 +1,30 @@
+.button {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 15px 28px;
+
+    color: $color-black;
+    background-color: $color-primary;
+    border-radius: 10px;
+    cursor: pointer;
+
+    text-align: center;
+    font-weight: 500;
+
+    transition: background-color 250ms;
+
+    &:hover {
+        background-color: $color-primary-active;
+    }
+
+    &:focus {
+        @include outline;
+    }
+
+    &[disabled] {
+        color: $color-gray-500;
+        background-color: $color-gray-200;
+
+        cursor: default;
+    }
+}
