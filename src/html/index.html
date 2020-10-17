@@ -4,29 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Кредитная карта с кэшбэком 1,5%</title>
+    <meta name="description" content="Лендинг кредитной карты Райффайзен банка. Верстка для тестового задания" />
+    <meta name="keywords" content="тестовая верстка" />
 
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.min.css">
     <link rel="icon" href="/img/favicons/favicon.png" sizes="16x16">
     <link rel="icon" href="/img/favicons/favicon-24.png" sizes="32x32">
     <link rel="icon" href="/img/favicons/favicon-32.png" sizes="32x32">
     <link rel="icon" href="/img/favicons/favicon-64.png" sizes="64x64">
+
+    <link rel="preload" href="/fonts/navigo-bold-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/navigo-bold-latin-extended.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/als-hauss-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/als-hauss-latin-extended.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/navigo-bold-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/als-hauss-latin.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body>
     <header class="page-header">
-        <img src="/img/logo.svg" alt="Райффайзен банк" class="page-header__logo" width="171" height="36">
-        <img src="/img/logo-visa.svg" alt="VISA" class="page-header__visa" width="87" height="28">
+        <div class="page-header__container">
+            <img src="/img/logo.svg" alt="Райффайзен банк" class="page-header__logo" width="171" height="36">
+            <img src="/img/logo-visa.svg" alt="VISA" class="page-header__visa" width="87" height="28">
 
-        <p class="page-header__phone phone">
-            <a href="tel:88007707562" class="phone__number">8 800 770-75-62</a>
-            <span class="phone__text">Бесплатно по России</span>
-        </p>
+            <p class="page-header__phone phone">
+                <a href="tel:88007707562" class="phone__number">
+                    <span class="visually-hidden visually-hidden_small">8 800 770-75-62</span>
+                </a>
+                <span class="phone__text visually-hidden visually-hidden_small">Бесплатно по России</span>
+            </p>
+        </div>
     </header>
 
     <main class="page-main">
         <div class="page-main__section promo">
-            <p class="promo__label">Бесплатное обслуживание</p>
-            <h1 class="promo__heading">Кредитная карта с кэшбэком 1,5%</h1>
-            <a href="#order" class="promo__button button">Оформить онлайн</a>
+            <div class="promo__container">
+                <p class="promo__label">
+                    <span class="visually-hidden visually-hidden_small">Бесплатное обслуживание</span>
+                </p>
+                <h1 class="promo__heading">
+                    Кредитная карта с&nbsp;кэшбэком
+                    <b class="promo__percent"><span class="promo__percent-value">1,5</span>%</b>
+                </h1>
+                <a href="#order" class="promo__button button">Оформить онлайн</a>
+            </div>
         </div>
 
         <section class="page-main__section conditions">
@@ -45,7 +65,7 @@
                     </span>
                     обслуживание
                 </li>
-                <li class="conditions__item">
+                <li class="conditions__item hide hide_small">
                     <span class="conditions__text">
                         до <b>52</b> дней
                     </span>
@@ -55,7 +75,8 @@
                     <span class="conditions__text">
                         до <b>600</b> тыс. ₽
                     </span>
-                    кредитный лимит
+                    <span class="hide hide_small">кредитный лимит</span>
+                    <span class="hide hide_large">и 52 дня без %</span>
                 </li>
             </ul>
         </section>

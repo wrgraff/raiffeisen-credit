@@ -1,0 +1,11 @@
+.hide_small {
+    @include breakpoint($breakpoints-large down) {
+        display: none;
+    }
+}
+
+.hide_large {
+    @include breakpoint($breakpoints-large) {
+        display: none;
+    }
+}
