@@ -3,6 +3,27 @@
 
     color: $color-white;
     background-color: $color-secondary;
+
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-image: url('../img/bg/promo-mobile.png');
+
+    @media (min-resolution: 2dppx) {
+        background-image: url('../img/bg/promo-mobile@2x.png');
+    }
+
+    @include breakpoint($breakpoints-large) {
+        background-image:
+            url('../img/bg/promo-desktop.png'),
+            linear-gradient(to right, #26364d 50%, #29405f 50%);
+
+        @media (min-resolution: 2dppx) {
+            background-image:
+                url('../img/bg/promo-desktop@2x.png'),
+                linear-gradient(to right, #26364d 50%, #29405f 50%);
+        }
+    }
 }
 
 .promo__container {
