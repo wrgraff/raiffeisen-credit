@@ -33,7 +33,7 @@ const js = () => {
         .pipe(gulp.dest('dist/js/'))
         .pipe(uglify())
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('dist/static/js'))
+        .pipe(gulp.dest('dist/js'))
         .pipe(browserSync.stream());
 };
 exports.js = js;
