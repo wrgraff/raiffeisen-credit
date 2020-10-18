@@ -8,17 +8,27 @@
 }
 
 .page-main__heading {
-    margin-bottom: 15px;
+    margin: 0 auto 15px;
 
     text-align: center;
+
+    @include breakpoint($breakpoints-large) {
+        max-width: $page-max-width;
+    }
 }
 
 .page-main__subheading {
+    margin: 0 auto;
+
     color: $color-gray-550;
 
     text-align: center;
 
     .page-main__section_dark & {
         color: $color-white;
+    }
+
+    @include breakpoint($breakpoints-large) {
+        max-width: $page-max-width;
     }
 }

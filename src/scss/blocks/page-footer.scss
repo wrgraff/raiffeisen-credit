@@ -7,6 +7,23 @@
     font-size: 14px;
 }
 
+.page-footer__container {
+    margin: 0 auto;
+
+    @include breakpoint($breakpoints-large) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: $page-max-width;
+    }
+}
+
+.page-footer__copyright {
+    @include breakpoint($breakpoints-large) {
+        margin-right: 16px;
+    }
+}
+
 .page-footer__requisits {
     margin-bottom: 26px;
 }
@@ -24,6 +41,11 @@
 
 .page-footer__scroll {
     height: 110px;
+    margin: 0 auto;
     padding-right: 16px;
     overflow-y: auto;
+
+    @include breakpoint($breakpoints-large) {
+        max-width: $page-max-width;
+    }
 }

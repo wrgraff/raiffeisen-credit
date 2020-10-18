@@ -1,8 +1,21 @@
+.credit {
+    @include breakpoint($breakpoints-large) {
+        background-color: $color-gray-100;
+    }
+}
+
 .credit__form {
     margin: 0 auto;
 
     @include breakpoint($breakpoints-large) {
+        display: grid;
+        grid-template-columns: 1fr 260px;
+        column-gap: 56px;
         max-width: $page-max-width;
+        padding: 47px 60px 60px;
+
+        background-color: $color-white;
+        border-radius: 14px;
     }
 }
 
@@ -18,6 +31,12 @@
         border-radius: 14px 14px 0 0;
 
         text-align: center;
+    }
+
+    @include breakpoint($breakpoints-large) {
+        grid-column: 2 / 3;
+        grid-row: 1 / 4;
+        padding-left: 56px;
     }
 }
 

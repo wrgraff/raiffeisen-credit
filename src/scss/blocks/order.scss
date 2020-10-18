@@ -1,25 +1,45 @@
 .order__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 12px;
     margin: 0 0 32px;
-    padding: 0 64px 0 16px;
 
     list-style: none;
+
+    @include breakpoint($breakpoints-large down) {
+        padding: 0 64px 0 16px;
+    }
+
+    @include breakpoint($breakpoints-large) {
+        gap: 40px;
+        max-width: $page-max-width;
+        margin: 0 auto;
+        padding: 0 56px;
+    }
 }
 
 .order__item {
     padding-left: 34px;
-
-    & + & {
-        margin-top: 12px;
-    }
 }
 
 .order__form {
     display: flex;
-    min-height: 450px;
-    margin: 0 -16px;
     padding: 32px;
 
-    background-color: $color-gray-100;
+    @include breakpoint($breakpoints-large down) {
+        min-height: 450px;
+        margin: 0 -16px;
+        background-color: $color-gray-100;
+    }
+
+    @include breakpoint($breakpoints-large) {
+        max-width: $page-max-width;
+        min-height: 511px;
+        margin: 0 auto;
+
+        border: 1px solid $color-gray-200;
+        border-radius: 12px;
+    }
 }
 
 .order__fake-text {
