@@ -17,7 +17,59 @@
 
     color: $color-white;
     background-color: $color-secondary;
+    background-repeat: no-repeat;
+    background-position: right 20px top 50%;
     border-radius: 14px;
 
     font-size: 22px;
+}
+
+.cashback__item_coins {
+    background-image: url('../img/cashback/coins-mobile.png');
+
+    @media (min-resolution: 2dppx) {
+        background-image: url('../img/cashback/coins-mobile@2x.png');
+    }
+
+    @include breakpoint($breakpoints-large) {
+        background-image: url('../img/bg/coins-desktop.png');
+
+        @media (min-resolution: 2dppx) {
+            background-image: url('../img/bg/coins-desktop@2x.png');
+        }
+    }
+}
+
+.cashback__item_bag {
+    background-position: right 20px top 0;
+    background-image: url('../img/cashback/bag-mobile.png');
+
+    @media (min-resolution: 2dppx) {
+        background-image: url('../img/cashback/bag-mobile@2x.png');
+    }
+
+    @include breakpoint($breakpoints-large) {
+        background-image: url('../img/bg/bag-desktop.png');
+
+        @media (min-resolution: 2dppx) {
+            background-image: url('../img/bg/bag-desktop@2x.png');
+        }
+    }
+}
+
+.cashback__item_car {
+    background-position: right 20px top calc(50% - 6px);
+    background-image: url('../img/cashback/car-mobile.png');
+
+    @media (min-resolution: 2dppx) {
+        background-image: url('../img/cashback/car-mobile@2x.png');
+    }
+
+    @include breakpoint($breakpoints-large) {
+        background-image: url('../img/bg/car-desktop.png');
+
+        @media (min-resolution: 2dppx) {
+            background-image: url('../img/bg/car-desktop@2x.png');
+        }
+    }
 }
