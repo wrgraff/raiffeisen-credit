@@ -1,0 +1,29 @@
+.page-footer {
+    margin-top: 60px;
+    padding: 26px 16px;
+
+    border-top: 1px solid $color-gray-200;
+
+    font-size: 14px;
+}
+
+.page-footer__requisits {
+    margin-bottom: 26px;
+}
+
+.page-footer__text {
+    margin: 0 -16px;
+    padding: 36px 16px 26px;
+
+    border-top: 1px solid $color-gray-200;
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.page-footer__scroll {
+    height: 110px;
+    padding-right: 16px;
+    overflow-y: auto;
+}
