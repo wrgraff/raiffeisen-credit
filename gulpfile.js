@@ -63,19 +63,11 @@ const img = () => {
 exports.img = img;
 
 const favicons = () => {
-    return gulp.src('src/img/**/*.{jpg,png,svg}')
+    return gulp.src('src/favicons/*.png')
         .pipe(imagemin([
-            imagemin.mozjpeg({quality: 75, progressive: true}),
             imagemin.optipng({optimizationLevel: 3}),
-            imagemin.svgo({
-                plugins: [
-                    {cleanupIDs: true}
-                ]
-            })
         ]))
-        .pipe(gulp.dest('dist/img'))
-        .pipe(webp())
-        .pipe(gulp.dest('dist/img')); 
+        .pipe(gulp.dest('dist/img/favicons')); 
 };
 exports.favicons = favicons;
 
