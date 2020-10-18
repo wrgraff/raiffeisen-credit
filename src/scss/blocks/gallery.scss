@@ -1,0 +1,24 @@
+.gallery__control {
+    display: none;
+}
+
+.gallery__list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.gallery__item {
+    display: flex;
+    justify-content: center;
+    padding: 54px 22px 0;
+    overflow: hidden;
+
+    background-color: $color-black;
+    border-radius: 14px;
+}
+
+.gallery__img {
+    margin-bottom: -48px;
+}

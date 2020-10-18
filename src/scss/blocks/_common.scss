@@ -1,5 +1,3 @@
-@import 'visually-hidden';
-@import 'hide';
 @import 'button';
 @import 'phone';
 @import 'promo';
@@ -8,6 +6,10 @@
 @import 'credit';
 @import 'range';
 @import 'order';
+@import 'gallery';
 // grid blocks
 @import 'page-header';
 @import 'page-main';
+// visibile tricks
+@import 'visually-hidden';
+@import 'hide';

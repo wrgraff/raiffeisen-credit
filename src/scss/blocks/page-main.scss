@@ -2,6 +2,11 @@
     padding: 45px 16px 40px;
 }
 
+.page-main__section_dark {
+    color: $color-white;
+    background-color: $color-gray-800;
+}
+
 .page-main__heading {
     margin-bottom: 15px;
 
@@ -12,4 +17,8 @@
     color: $color-gray-550;
 
     text-align: center;
+
+    .page-main__section_dark & {
+        color: $color-white;
+    }
 }
