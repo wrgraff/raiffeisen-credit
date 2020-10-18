@@ -20,6 +20,20 @@
 
 .order__item {
     padding-left: 34px;
+
+    background-repeat: no-repeat;
+}
+
+.order__item_doc {
+    background-image: url('../img/ico/doc.svg');
+}
+
+.order__item_message {
+    background-image: url('../img/ico/message.svg');
+}
+
+.order__item_card {
+    background-image: url('../img/ico/card.svg');
 }
 
 .order__form {
