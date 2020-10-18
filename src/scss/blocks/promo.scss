@@ -1,12 +1,16 @@
 .promo {
+    padding: 24px 16px 0;
+
     color: $color-white;
     background-color: $color-secondary;
 }
 
 .promo__container {
-    max-width: $page-max-width;
     margin: 0 auto;
-    padding: 24px 16px 0;
+
+    @include breakpoint($breakpoints-large) {
+        max-width: $page-max-width;
+    }
 }
 
 .promo__label {

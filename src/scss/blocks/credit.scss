@@ -1,3 +1,11 @@
+.credit__form {
+    margin: 0 auto;
+
+    @include breakpoint($breakpoints-large) {
+        max-width: $page-max-width;
+    }
+}
+
 .credit__range {
     margin-bottom: 30px;
 }

@@ -3,8 +3,7 @@
 }
 
 .conditions__list {
-    justify-content: space-around;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
 
     color: $color-gray-550;
@@ -12,11 +11,23 @@
 
     text-align: center;
     font-size: 14px;
+
+    @include breakpoint(780px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    @include breakpoint($breakpoints-large) {
+        max-width: $page-max-width;
+    }
 }
 
 .conditions__item {
-    & + & {
-        margin-top: 30px;
+    @include breakpoint(780px down) {
+        & + & {
+            margin-top: 30px;
+        }
     }
 }
 
