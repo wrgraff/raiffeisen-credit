@@ -3,12 +3,14 @@
 }
 
 .credit__total {
-    padding: 32px 20px 24px;
+    @include breakpoint($breakpoints-large down) {
+        padding: 32px 20px 24px;
 
-    background-color: $color-gray-100;
-    border-radius: 14px 14px 0 0;
+        background-color: $color-gray-100;
+        border-radius: 14px 14px 0 0;
 
-    text-align: center;
+        text-align: center;
+    }
 }
 
 .credit__sum {
@@ -27,13 +29,16 @@
 }
 
 .credit__comment {
-    padding: 12px 56px;
-
     color: $color-gray-550;
-    background-color: $color-gray-100;
-    border-top: 1px solid $color-gray-200;
-    border-radius: 0 0 14px 14px;
 
     font-size: 12px;
-    text-align: center;
+
+    @include breakpoint($breakpoints-large down) {
+        padding: 12px 32px;
+        background-color: $color-gray-100;
+        border-top: 1px solid $color-gray-200;
+        border-radius: 0 0 14px 14px;
+
+        text-align: center;
+    }
 }
