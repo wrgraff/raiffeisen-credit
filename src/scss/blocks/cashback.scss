@@ -32,10 +32,10 @@
     }
 
     @include breakpoint($breakpoints-large) {
-        background-image: url('../img/bg/coins-desktop.png');
+        background-image: url('../img/cashback/coins-desktop.png');
 
         @media (min-resolution: 2dppx) {
-            background-image: url('../img/bg/coins-desktop@2x.png');
+            background-image: url('../img/cashback/coins-desktop@2x.png');
         }
     }
 }
@@ -49,10 +49,10 @@
     }
 
     @include breakpoint($breakpoints-large) {
-        background-image: url('../img/bg/bag-desktop.png');
+        background-image: url('../img/cashback/bag-desktop.png');
 
         @media (min-resolution: 2dppx) {
-            background-image: url('../img/bg/bag-desktop@2x.png');
+            background-image: url('../img/cashback/bag-desktop@2x.png');
         }
     }
 }
@@ -66,10 +66,10 @@
     }
 
     @include breakpoint($breakpoints-large) {
-        background-image: url('../img/bg/car-desktop.png');
+        background-image: url('../img/cashback/car-desktop.png');
 
         @media (min-resolution: 2dppx) {
-            background-image: url('../img/bg/car-desktop@2x.png');
+            background-image: url('../img/cashback/car-desktop@2x.png');
         }
     }
 }

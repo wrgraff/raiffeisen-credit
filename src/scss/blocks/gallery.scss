@@ -61,17 +61,49 @@
 }
 
 .gallery__item {
+    position: relative;
+
     display: flex;
+    align-items: flex-end;
     justify-content: center;
     padding: 54px 22px 0;
     overflow: hidden;
 
     background-color: $color-black;
     border-radius: 14px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - 83px);
+
+        width: 167px;
+        height: 286px;
+
+        background-repeat: no-repeat;
+        background-image: url('../img/screens/device-mobile.png');
+
+        @media (min-resolution: 2dppx) {
+            background-image: url('../img/screens/device-mobile@2x.png');
+        }
+
+        @include breakpoint($breakpoints-large) {
+            left: calc(50% - 93px);
+            width: 186px;
+            height: 320px;
+
+            background-image: url('../img/screens/device-desktop.png');
+
+            @media (min-resolution: 2dppx) {
+                background-image: url('../img/screens/device-desktop@2x.png');
+            }
+        }
+    }
 }
 
 .gallery__img {
-    margin-bottom: -48px;
+    display: block;
 }
 
 .gallery__nav {
