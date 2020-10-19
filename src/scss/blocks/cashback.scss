@@ -48,6 +48,7 @@
         background-image: url('../img/cashback/coins-mobile.png');
 
         @media (min-resolution: 2dppx) {
+            background-size: 121px 100px;
             background-image: url('../img/cashback/coins-mobile@2x.png');
         }
     }
@@ -56,6 +57,7 @@
         background-image: url('../img/cashback/coins-desktop.png');
 
         @media (min-resolution: 2dppx) {
+            background-size: 160px 130px;
             background-image: url('../img/cashback/coins-desktop@2x.png');
         }
     }
@@ -67,6 +69,7 @@
         background-image: url('../img/cashback/bag-mobile.png');
 
         @media (min-resolution: 2dppx) {
+            background-size: 105px 124px;
             background-image: url('../img/cashback/bag-mobile@2x.png');
         }
     }
@@ -76,6 +79,7 @@
         background-image: url('../img/cashback/bag-desktop.png');
 
         @media (min-resolution: 2dppx) {
+            background-size: 131px 155px;
             background-image: url('../img/cashback/bag-desktop@2x.png');
         }
     }
@@ -87,6 +91,7 @@
         background-image: url('../img/cashback/car-mobile.png');
 
         @media (min-resolution: 2dppx) {
+            background-size: 120px 106px;
             background-image: url('../img/cashback/car-mobile@2x.png');
         }
     }
@@ -96,6 +101,7 @@
         background-image: url('../img/cashback/car-desktop.png');
 
         @media (min-resolution: 2dppx) {
+            background-size: 133px 154px;
             background-image: url('../img/cashback/car-desktop@2x.png');
         }
     }
