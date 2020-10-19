@@ -199,7 +199,7 @@
 
                 <ul class="gallery__list">
                     <li class="gallery__item">
-                        <picture>
+                        <picture class="gallery__picture">
                             <source
                                 srcset="/img/screens/main-mobile.webp 1x, /img/screens/main-mobile@2x.webp 2x"
                                 media="(max-width: 1180px)"
@@ -222,7 +222,7 @@
                         </picture>
                     </li>
                     <li class="gallery__item">
-                        <picture>
+                        <picture class="gallery__picture">
                             <source
                                 srcset="/img/screens/cardtocard-mobile.webp 1x, /img/screens/cardtocard-mobile@2x.webp 2x"
                                 media="(max-width: 1180px)"
@@ -245,7 +245,7 @@
                         </picture>
                     </li>
                     <li class="gallery__item">
-                        <picture>
+                        <picture class="gallery__picture">
                             <source
                                 srcset="/img/screens/additional-mobile.webp 1x, /img/screens/additional-mobile@2x.webp 2x"
                                 media="(max-width: 1180px)"
@@ -268,7 +268,7 @@
                         </picture>
                     </li>
                     <li class="gallery__item">
-                        <picture>
+                        <picture class="gallery__picture">
                             <source
                                 srcset="/img/screens/payment-mobile.webp 1x, /img/screens/payment-mobile@2x.webp 2x"
                                 media="(max-width: 1180px)"
@@ -290,8 +290,8 @@
                         `   />
                         </picture>
                     </li>
-                    <!-- <li class="gallery__item">
-                        <picture>
+                    <li class="gallery__item">
+                        <picture class="gallery__picture">
                             <source
                                 srcset="/img/screens/main-mobile.webp 1x, /img/screens/main-mobile@2x.webp 2x"
                                 media="(max-width: 1180px)"
@@ -314,7 +314,7 @@
                         </picture>
                     </li>
                     <li class="gallery__item">
-                        <picture>
+                        <picture class="gallery__picture">
                             <source
                                 srcset="/img/screens/additional-mobile.webp 1x, /img/screens/additional-mobile@2x.webp 2x"
                                 media="(max-width: 1180px)"
@@ -335,41 +335,29 @@
                                 alt="Еще один экран, которых там явно больше, чем 4"
                         `   />
                         </picture>
-                    </li> -->
+                    </li>
                 </ul>
 
-                <ul class="gallery__nav slider-nav hide hide_large">
-                    <li class="slider-nav__item">
-                        <button type="button" class="slider-nav__button">
-                            <span class="visually-hidden">Слайд 1</span>
-                        </button>
-                    </li>
-                    <li class="slider-nav__item">
-                        <button type="button" class="slider-nav__button">
-                            <span class="visually-hidden">Слайд 2</span>
-                        </button>
-                    </li>
-                    <li class="slider-nav__item">
-                        <button type="button" class="slider-nav__button">
-                            <span class="visually-hidden">Слайд 3</span>
-                        </button>
-                    </li>
-                    <li class="slider-nav__item">
-                        <button type="button" class="slider-nav__button">
-                            <span class="visually-hidden">Слайд 4</span>
-                        </button>
-                    </li>
-                    <li class="slider-nav__item">
-                        <button type="button" class="slider-nav__button">
-                            <span class="visually-hidden">Слайд 5</span>
-                        </button>
-                    </li>
-                    <li class="slider-nav__item">
-                        <button type="button" class="slider-nav__button">
-                            <span class="visually-hidden">Слайд 6</span>
-                        </button>
-                    </li>
-                </ul>
+                <div class="gallery__nav slider-nav hide hide_large">
+                    <button type="button" class="slider-nav__button">
+                        <span class="visually-hidden">Слайд 1</span>
+                    </button>
+                    <button type="button" class="slider-nav__button">
+                        <span class="visually-hidden">Слайд 2</span>
+                    </button>
+                    <button type="button" class="slider-nav__button">
+                        <span class="visually-hidden">Слайд 3</span>
+                    </button>
+                    <button type="button" class="slider-nav__button">
+                        <span class="visually-hidden">Слайд 4</span>
+                    </button>
+                    <button type="button" class="slider-nav__button">
+                        <span class="visually-hidden">Слайд 5</span>
+                    </button>
+                    <button type="button" class="slider-nav__button">
+                        <span class="visually-hidden">Слайд 6</span>
+                    </button>
+                </div>
             </div>
 
             <a href="#order" class="gallery__button button hide hide_small">Оформить карту онлайн</a>

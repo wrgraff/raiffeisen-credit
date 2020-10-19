@@ -12,15 +12,15 @@
 
 .gallery__slider {
     position: relative;
-    margin: 0 auto;
 
     @include breakpoint($breakpoints-large down) {
+        margin: 0 -16px;
         padding-top: 32px;
     }
 
     @include breakpoint($breakpoints-large) {
         max-width: 996px;
-        margin-bottom: 69px;
+        margin: 0 auto 69px;
         padding-top: 10px;
     }
 }
@@ -64,20 +64,26 @@
 }
 
 .gallery__list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     margin: 0;
     padding: 0;
 
-    list-style: none;
-
     @include breakpoint($breakpoints-large down) {
-        gap: 16px;
         margin-bottom: 28px;
     }
 
-    @include breakpoint($breakpoints-large) {
-        gap: 20px;
+    &:not(.tns-carousel) {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+
+        list-style: none;
+
+        @include breakpoint($breakpoints-large down) {
+            gap: 16px;
+        }
+
+        @include breakpoint($breakpoints-large) {
+            gap: 20px;
+        }
     }
 }
 
@@ -87,8 +93,44 @@
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    padding: 62px 22px 0;
     overflow: hidden;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+
+        width: 167px;
+        height: 286px;
+
+        transform: translateX(-50%);
+
+        background-size: 167px 286px;
+        background-repeat: no-repeat;
+        background-image: url('../img/screens/device-mobile.png');
+
+        @media (min-resolution: 2dppx) {
+            background-image: url('../img/screens/device-mobile@2x.png');
+        }
+
+        @include breakpoint($breakpoints-large) {
+            width: 186px;
+            height: 320px;
+
+            background-size: 186px 320px;
+            background-image: url('../img/screens/device-desktop.png');
+
+            @media (min-resolution: 2dppx) {
+                background-image: url('../img/screens/device-desktop@2x.png');
+            }
+        }
+    }
+}
+
+.gallery__picture {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 
     background-color: $color-black;
     border-radius: 14px;
@@ -99,35 +141,6 @@
 
     @include breakpoint($breakpoints-large) {
         padding: 70px 22px 0;
-    }
-
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: calc(50% - 83px);
-
-        width: 167px;
-        height: 286px;
-
-        background-repeat: no-repeat;
-        background-image: url('../img/screens/device-mobile.png');
-
-        @media (min-resolution: 2dppx) {
-            background-image: url('../img/screens/device-mobile@2x.png');
-        }
-
-        @include breakpoint($breakpoints-large) {
-            left: calc(50% - 93px);
-            width: 186px;
-            height: 320px;
-
-            background-image: url('../img/screens/device-desktop.png');
-
-            @media (min-resolution: 2dppx) {
-                background-image: url('../img/screens/device-desktop@2x.png');
-            }
-        }
     }
 }
 
