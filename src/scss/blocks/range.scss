@@ -2,6 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-content: flex-start;
 }
 
 .range__field {
@@ -10,6 +11,8 @@
     align-items: baseline;
     justify-content: space-between;
     width: 100%;
+
+    margin-bottom: 5px;
 }
 
 .range__title {
@@ -18,7 +21,13 @@
 
 .range__input,
 .range__price {
-    font-size: 24px;
+    @include breakpoint($breakpoints-large down) {
+        font-size: 24px;
+    }
+
+    @include breakpoint($breakpoints-large) {
+        font-size: 32px;
+    }
 }
 
 .range__input {

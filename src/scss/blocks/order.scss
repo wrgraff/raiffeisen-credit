@@ -1,27 +1,49 @@
+.order {
+    @include breakpoint($breakpoints-large down) {
+        padding-top: 6px;
+        padding-bottom: 62px;
+    }
+
+    @include breakpoint($breakpoints-large) {
+        padding-bottom: 90px;
+    }
+}
+
 .order__list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 12px;
-    margin: 0 0 32px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
 
     list-style: none;
 
     @include breakpoint($breakpoints-large down) {
-        padding: 0 64px 0 16px;
+        flex-wrap: wrap;
+        margin: -22px -20px 32px;
+        padding: 0 60px 0 16px;
     }
 
     @include breakpoint($breakpoints-large) {
-        gap: 40px;
-        max-width: $page-max-width;
-        margin: 0 auto;
-        padding: 0 56px;
+        max-width: 893px;
+        margin: 0 auto 44px;
+        padding-top: 4px;
     }
 }
 
 .order__item {
-    padding-left: 34px;
+    flex-grow: 1;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-left: 33px;
 
     background-repeat: no-repeat;
+
+    @include breakpoint($breakpoints-large down) {
+        margin-top: 14px;
+    }
+
+    @include breakpoint($breakpoints-large) {
+        min-width: 246px;
+    }
 }
 
 .order__item_doc {
@@ -47,7 +69,7 @@
     }
 
     @include breakpoint($breakpoints-large) {
-        max-width: $page-max-width;
+        max-width: 964px;
         min-height: 511px;
         margin: 0 auto;
 

@@ -10,12 +10,15 @@
     list-style: none;
 
     text-align: center;
-    font-size: 14px;
 
     @include breakpoint(780px) {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+    }
+
+    @include breakpoint($breakpoints-large down) {
+        font-size: 14px;
     }
 
     @include breakpoint($breakpoints-large) {
@@ -33,16 +36,31 @@
 
 .conditions__text {
     display: block;
+    margin-bottom: -7px;
 
     color: $color-black;
 
     font-family: $font-family-heading, $font-family, sans-serif;
-    font-size: 30px;
     font-weight: 700;
-    line-height: 1;
+    line-height: 1.1;
+
+    @include breakpoint($breakpoints-large down) {
+        font-size: 30px;
+    }
+
+    @include breakpoint($breakpoints-large) {
+        font-size: 36px;
+    }
 
     b {
-        font-size: 48px;
         font-weight: 700;
+
+        @include breakpoint($breakpoints-large down) {
+            font-size: 48px;
+        }
+
+        @include breakpoint($breakpoints-large) {
+            font-size: 64px;
+        }
     }
 }

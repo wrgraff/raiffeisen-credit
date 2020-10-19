@@ -1,5 +1,11 @@
 .page-main__section {
-    padding: 45px 16px 40px;
+    @include breakpoint($breakpoints-large down) {
+        padding: 48px 16px 40px;
+    }
+
+    @include breakpoint($breakpoints-large) {
+        padding: 66px 16px 61px;
+    }
 }
 
 .page-main__section_dark {
@@ -8,21 +14,30 @@
 }
 
 .page-main__heading {
-    margin: 0 auto 15px;
-
+    margin: 0 auto 28px;
     text-align: center;
 
+    @include breakpoint($breakpoints-large down) {
+        padding-top: 12px;
+    }
+
     @include breakpoint($breakpoints-large) {
+        padding-top: 20px;
         max-width: $page-max-width;
     }
 }
 
 .page-main__subheading {
     margin: 0 auto;
+    padding: 0 24px;
 
     color: $color-gray-550;
 
     text-align: center;
+
+    .page-main__heading + & {
+        margin-top: -20px;
+    }
 
     .page-main__section_dark & {
         color: $color-white;
@@ -30,5 +45,8 @@
 
     @include breakpoint($breakpoints-large) {
         max-width: $page-max-width;
+        margin-bottom: 52px;
+
+        font-size: 18px;
     }
 }

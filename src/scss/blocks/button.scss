@@ -1,7 +1,7 @@
 .button {
     display: inline-block;
     vertical-align: middle;
-    padding: 15px 28px;
+    padding: 13px 28px 14px;
 
     color: $color-black;
     background-color: $color-primary;
@@ -9,8 +9,11 @@
     border-radius: 10px;
     cursor: pointer;
 
-    text-align: center;
+    font-family: inherit;
+    font-size: 18px;
     font-weight: 500;
+    text-align: center;
+    line-height: inherit;
 
     transition: background-color 250ms;
 

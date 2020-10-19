@@ -1,14 +1,20 @@
 .cashback__list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    gap: 14px;
     margin: 0 auto;
     padding: 0;
 
     list-style: none;
 
+    @include breakpoint($breakpoints-large down) {
+        gap: 14px;
+    }
+
     @include breakpoint($breakpoints-large) {
         max-width: $page-max-width;
+        gap: 24px;
+        padding-top: 26px;
+        padding-bottom: 30px;
     }
 }
 
@@ -18,17 +24,32 @@
     color: $color-white;
     background-color: $color-secondary;
     background-repeat: no-repeat;
-    background-position: right 20px top 50%;
     border-radius: 14px;
 
-    font-size: 22px;
+    @include breakpoint($breakpoints-large down) {
+        background-position: right 20px top 50%;
+        font-size: 22px;
+        line-height: 1.3;
+    }
+
+    @include breakpoint($breakpoints-large) {
+        padding-top: 60px;
+        padding-bottom: 62px;
+
+        background-position: right 30px top 50%;
+
+        font-size: 24px;
+        line-height: 1.2;
+    }
 }
 
 .cashback__item_coins {
-    background-image: url('../img/cashback/coins-mobile.png');
+    @include breakpoint($breakpoints-large down) {
+        background-image: url('../img/cashback/coins-mobile.png');
 
-    @media (min-resolution: 2dppx) {
-        background-image: url('../img/cashback/coins-mobile@2x.png');
+        @media (min-resolution: 2dppx) {
+            background-image: url('../img/cashback/coins-mobile@2x.png');
+        }
     }
 
     @include breakpoint($breakpoints-large) {
@@ -41,14 +62,17 @@
 }
 
 .cashback__item_bag {
-    background-position: right 20px top 0;
-    background-image: url('../img/cashback/bag-mobile.png');
+    @include breakpoint($breakpoints-large down) {
+        background-position: right 28px top 0;
+        background-image: url('../img/cashback/bag-mobile.png');
 
-    @media (min-resolution: 2dppx) {
-        background-image: url('../img/cashback/bag-mobile@2x.png');
+        @media (min-resolution: 2dppx) {
+            background-image: url('../img/cashback/bag-mobile@2x.png');
+        }
     }
 
     @include breakpoint($breakpoints-large) {
+        background-position: right 30px top 0;
         background-image: url('../img/cashback/bag-desktop.png');
 
         @media (min-resolution: 2dppx) {
@@ -58,14 +82,17 @@
 }
 
 .cashback__item_car {
-    background-position: right 20px top calc(50% - 6px);
-    background-image: url('../img/cashback/car-mobile.png');
+    @include breakpoint($breakpoints-large down) {
+        background-position: right 20px top calc(50% - 6px);
+        background-image: url('../img/cashback/car-mobile.png');
 
-    @media (min-resolution: 2dppx) {
-        background-image: url('../img/cashback/car-mobile@2x.png');
+        @media (min-resolution: 2dppx) {
+            background-image: url('../img/cashback/car-mobile@2x.png');
+        }
     }
 
     @include breakpoint($breakpoints-large) {
+        background-position: right 0 top calc(50% - 7px);
         background-image: url('../img/cashback/car-desktop.png');
 
         @media (min-resolution: 2dppx) {

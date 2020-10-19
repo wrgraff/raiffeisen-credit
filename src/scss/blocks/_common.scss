@@ -1,3 +1,8 @@
+// grid blocks
+@import 'page-header';
+@import 'page-main';
+@import 'page-footer';
+// small blocks
 @import 'button';
 @import 'phone';
 @import 'promo';
@@ -8,10 +13,6 @@
 @import 'order';
 @import 'gallery';
 @import 'slider-nav';
-// grid blocks
-@import 'page-header';
-@import 'page-main';
-@import 'page-footer';
 // visibile tricks
 @import 'visually-hidden';
 @import 'hide';

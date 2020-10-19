@@ -5,15 +5,16 @@
     background-color: $color-secondary;
 
     background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: contain;
+    background-position: 50% 0;
+    background-size: auto calc(100% - 54px);
     background-image: url('../img/bg/promo-mobile.png');
 
     @media (min-resolution: 2dppx) {
         background-image: url('../img/bg/promo-mobile@2x.png');
     }
 
-    @include breakpoint($breakpoints-large) {
+    @include breakpoint(376px) {
+        background-size: auto 100%;
         background-image:
             url('../img/bg/promo-desktop.png'),
             linear-gradient(to right, #26364d 50%, #29405f 50%);
@@ -23,6 +24,11 @@
                 url('../img/bg/promo-desktop@2x.png'),
                 linear-gradient(to right, #26364d 50%, #29405f 50%);
         }
+    }
+
+    @include breakpoint($breakpoints-large) {
+        padding-top: 80px;
+        padding-bottom: 80px;
     }
 }
 
@@ -39,11 +45,12 @@
 
     display: inline-block;
     vertical-align: middle;
-    margin: 0 0 12px;
     padding: 5px 6px 5px 12px;
 
     background-color: $color-blue;
     border-radius: 4px 0 0 4px;
+
+    letter-spacing: .01em;
 
     &::after {
         content: url('../img/bg/arrow.svg');
@@ -54,25 +61,51 @@
     }
 
     @include breakpoint($breakpoints-large down) {
+        margin-bottom: 21px;
+
         &::before {
             content: 'Обслуживание 0₽';
         }
     }
+
+    @include breakpoint($breakpoints-large) {
+        margin-bottom: 24px;
+    }
 }
 
 .promo__heading {
-    margin-bottom: 264px;
+    @include breakpoint($breakpoints-large down) {
+        margin-bottom: 248px;
+    }
+
+    @include breakpoint($breakpoints-large) {
+        max-width: 600px;
+        margin-bottom: 21px;
+    }
 }
 
 .promo__percent {
     display: block;
-
-    font-size: 42px;
     font-weight: 900;
+
+    @include breakpoint($breakpoints-large down) {
+        font-size: 42px;
+    }
+
+    @include breakpoint($breakpoints-large) {
+        font-size: 72px;
+        line-height: 1.05;
+    }
 }
 
 .promo__percent-value {
-    font-size: 64px;
+    @include breakpoint($breakpoints-large down) {
+        font-size: 64px;
+    }
+
+    @include breakpoint($breakpoints-large) {
+        font-size: 108px;
+    }
 }
 
 .promo__button {
