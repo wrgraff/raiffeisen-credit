@@ -1,5 +1,7 @@
 .promo {
-    padding: 24px 16px 0;
+    position: relative;
+
+    padding: 24px 16px 54px;
 
     color: $color-white;
     background-color: $color-secondary;
@@ -110,9 +112,18 @@
 
 .promo__button {
     @include breakpoint($breakpoints-large down) {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+
         display: block;
-        margin: 0 -16px;
 
         border-radius: 0;
     }
+}
+
+.promo__button_fixed {
+    position: fixed;
 }

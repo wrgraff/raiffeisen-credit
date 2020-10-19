@@ -1,4 +1,6 @@
 .order {
+    overflow: hidden;
+
     @include breakpoint($breakpoints-large down) {
         padding-top: 6px;
         padding-bottom: 62px;
