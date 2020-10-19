@@ -16,7 +16,6 @@
 
     @include breakpoint($breakpoints-large down) {
         padding-top: 32px;
-        margin-bottom: 28px;
     }
 
     @include breakpoint($breakpoints-large) {
@@ -74,6 +73,7 @@
 
     @include breakpoint($breakpoints-large down) {
         gap: 16px;
+        margin-bottom: 28px;
     }
 
     @include breakpoint($breakpoints-large) {
