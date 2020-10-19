@@ -2,6 +2,8 @@
 
 Верстка для тестового задания
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c75b50ca-93dd-40fd-b4eb-6a90afb6dfc1/deploy-status)](https://app.netlify.com/sites/raiffeisen-credit/deploys)
+
 ## Scripts
 
 `npm start` or `gulp start`
