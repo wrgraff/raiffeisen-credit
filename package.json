@@ -2,7 +2,7 @@
     "private": "true",
     "scripts": {
         "stylelint": "stylelint \"src/scss/**/*.scss\" --syntax scss",
-        "editorconfig": "editorconfig-checker --exclude '.git|node_modules|.DS_Store'",
+        "editorconfig": "editorconfig-checker --exclude '.git|node_modules|.DS_Store|dist'",
         "test": "npm run stylelint && npm run editorconfig",
         "build": "gulp build",
         "start": "gulp start"
@@ -34,7 +34,5 @@
         "maintained node versions",
         "not dead"
     ],
-    "dependencies": {
-        "tiny-slider": "^2.9.3"
-    }
+    "dependencies": {}
 }

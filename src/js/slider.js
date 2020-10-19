@@ -1,5 +1,4 @@
 const gallery = document.querySelector('.gallery__list');
-console.log(gallery)
 
 if (gallery) {
     const gallerySlider = tns({
@@ -18,6 +17,6 @@ if (gallery) {
                 items: 4,
                 gutter: 20
             }
-          }
+        }
     });
 }
