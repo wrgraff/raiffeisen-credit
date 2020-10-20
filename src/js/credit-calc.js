@@ -17,6 +17,7 @@
             this.handlePosition = this.handle.offsetLeft;
             this.progressWidth = this.progress.offsetWidth;
             this.handle.addEventListener('mousedown', this.listenHandle);
+            this.handle.addEventListener('touchstart', this.listenHandle);
         };
 
         this.initPositions = () => {
@@ -49,12 +50,13 @@
 
         this.listenHandle = evt => {
             evt.preventDefault();
-            let currentPosition = evt.clientX;
+            let currentPosition = evt.clientX || evt.touches[0].clientX;
 
             const moveMouseHandler = moveEvt => {
                 moveEvt.preventDefault();
+                const clientPosition = moveEvt.clientX || moveEvt.touches[0].clientX;
                 
-                let shift = moveEvt.clientX - currentPosition;
+                let shift = clientPosition - currentPosition;
                 let startPosition = this.handlePosition + 16;
                 this.updatePositions(startPosition + shift);
                 this.updateValue(startPosition + shift);
@@ -65,11 +67,15 @@
 
                 this.handlePosition = this.handle.offsetLeft;
                 document.removeEventListener('mousemove', moveMouseHandler);
+                document.removeEventListener('touchmove', moveMouseHandler);
                 document.removeEventListener('mouseup', upMouseHandler);
+                document.removeEventListener('touchend', upMouseHandler);
             };
 
             document.addEventListener('mousemove', moveMouseHandler);
+            document.addEventListener('touchmove', moveMouseHandler);
             document.addEventListener('mouseup', upMouseHandler);
+            document.addEventListener('touchend', upMouseHandler);
         }
     };
 
