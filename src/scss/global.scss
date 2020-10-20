@@ -34,6 +34,7 @@ h6 {
 h1 {
     @include breakpoint($breakpoints-large down) {
         font-size: 36px;
+        line-height: 42px;
     }
 
     @include breakpoint($breakpoints-large) {
@@ -45,6 +46,7 @@ h1 {
 h2 {
     @include breakpoint($breakpoints-large down) {
         font-size: 30px;
+        line-height: 36px;
     }
 
     @include breakpoint($breakpoints-large) {

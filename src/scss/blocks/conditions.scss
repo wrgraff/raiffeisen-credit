@@ -29,7 +29,7 @@
 .conditions__item {
     @include breakpoint(780px down) {
         & + & {
-            margin-top: 30px;
+            margin-top: 24px;
         }
     }
 }
@@ -44,6 +44,7 @@
 
     @include breakpoint($breakpoints-large down) {
         font-size: 30px;
+        line-height: 42px;
     }
 
     @include breakpoint($breakpoints-large) {
