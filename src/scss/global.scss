@@ -50,3 +50,7 @@ h2 {
         font-size: 48px;
     }
 }
+
+.js-focus-visible :focus:not(.focus-visible) {
+    outline: none;
+}
