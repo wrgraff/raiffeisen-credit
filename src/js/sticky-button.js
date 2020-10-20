@@ -9,7 +9,7 @@
     window.addEventListener('optimizedResize', initScrollListener);
 
     function initScrollListener() {
-        if (window.innerWidth < 1400) {
+        if (window.innerWidth < 1188) {
             sizes.pageHeaderHeight = pageHeader.offsetHeight;
             sizes.promoSectionHeight = promoSection.offsetHeight;
             sizes.orderFormHeight = orderForm.offsetHeight;

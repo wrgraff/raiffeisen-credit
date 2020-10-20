@@ -105,8 +105,8 @@
                 <div class="credit__range range">
                     <label class="range__field">
                         <p class="range__title">Какая сумма нужна?</p>
-                        <input type="number" min="90000" max="2000000" step="10000" value="500000" class="range__input">
-                        <span class="range__price">500 000 ₽</span>
+                        <input name="amount" type="number" min="90000" max="2000000" step="10000" value="500000" class="range__input">
+                        <span class="range__value" id="amount">500 000 ₽</span>
                     </label>
 
                     <div class="range__bar">
@@ -130,8 +130,8 @@
                 <div class="credit__range range">
                     <label class="range__field">
                         <p class="range__title">На какой срок?</p>
-                        <input type="number" min="13" max="60" step="1" value="36" class="range__input">
-                        <span class="range__price">36 мес.</span>
+                        <input name="length" type="number" min="13" max="60" step="1" value="36" class="range__input">
+                        <span class="range__value" id="length">36 мес.</span>
                     </label>
 
                     <div class="range__bar">
@@ -159,7 +159,7 @@
                     </p>
 
                     <p class="credit__sum">
-                        <b>14 265 ₽</b>
+                        <b id="sum">14 265 ₽</b>
                         ежемесячный платёж
                     </p>
 

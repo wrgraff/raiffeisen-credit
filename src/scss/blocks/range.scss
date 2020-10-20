@@ -20,7 +20,9 @@
 }
 
 .range__input,
-.range__price {
+.range__value {
+    font-family: $font-family-heading, $font-family, sans-serif;
+
     @include breakpoint($breakpoints-large down) {
         font-size: 24px;
     }
@@ -47,7 +49,7 @@
     }
 }
 
-.range__price {
+.range__value {
     .no-js & {
         display: none;
     }
@@ -55,15 +57,25 @@
 
 .range__bar {
     position: relative;
+    z-index: 0;
 
     width: 100%;
     height: 4px;
-    margin-bottom: 14px;
-    padding: 0 16px;
+    margin: 0 16px 14px;
 
-    background-color: $color-gray-200;
-    background-image: linear-gradient(to right, $color-primary 16px, $color-gray-200 16px);
-    border-radius: 2px;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -16px;
+        bottom: 0;
+        left: -16px;
+        z-index: -1;
+
+        background-color: $color-gray-200;
+        background-image: linear-gradient(to right, $color-primary 16px, $color-gray-200 16px);
+        border-radius: 2px;
+    }
 
     .no-js & {
         display: none;
@@ -71,7 +83,7 @@
 }
 
 .range__progress {
-    width: 100px;
+    width: 0;
     height: 4px;
 
     background-color: $color-primary;
@@ -80,7 +92,7 @@
 .range__handle {
     position: absolute;
     top: calc(50% - 16px);
-    left: 100px;
+    left: 0;
 
     width: 32px;
     height: 32px;
@@ -89,6 +101,8 @@
     background-color: $color-primary;
     border: none;
     border-radius: 50%;
+
+    transition: background-color 250ms;
 
     &:hover {
         background-color: $color-primary-active;
