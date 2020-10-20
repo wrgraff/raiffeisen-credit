@@ -14,7 +14,7 @@
 }
 
 .page-main__heading {
-    margin: 0 auto 28px;
+    margin: 0 auto 36px;
     text-align: center;
 
     @include breakpoint($breakpoints-large down) {
@@ -22,7 +22,7 @@
     }
 
     @include breakpoint($breakpoints-large) {
-        padding-top: 20px;
+        padding-top: 16px;
         max-width: $page-max-width;
     }
 }

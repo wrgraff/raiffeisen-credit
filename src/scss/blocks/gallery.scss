@@ -126,10 +126,10 @@
 }
 
 .gallery__picture {
+    flex-grow: 1;
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    width: 100%;
 
     background-color: $color-black;
     border-radius: 14px;

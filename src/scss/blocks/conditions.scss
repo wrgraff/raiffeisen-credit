@@ -36,13 +36,11 @@
 
 .conditions__text {
     display: block;
-    margin-bottom: -7px;
 
     color: $color-black;
 
     font-family: $font-family-heading, $font-family, sans-serif;
     font-weight: 700;
-    line-height: 1.1;
 
     @include breakpoint($breakpoints-large down) {
         font-size: 30px;
@@ -50,6 +48,7 @@
 
     @include breakpoint($breakpoints-large) {
         font-size: 36px;
+        line-height: 52px;
     }
 
     b {

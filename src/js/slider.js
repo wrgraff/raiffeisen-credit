@@ -16,7 +16,8 @@
                 1200: {
                     fixedWidth: false,
                     items: 4,
-                    gutter: 20
+                    gutter: 20,
+                    edgePadding: 0
                 }
             }
         });

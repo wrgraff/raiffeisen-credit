@@ -71,7 +71,7 @@
     }
 
     @include breakpoint($breakpoints-large) {
-        margin-bottom: 24px;
+        margin-bottom: 14px;
     }
 }
 
@@ -82,7 +82,7 @@
 
     @include breakpoint($breakpoints-large) {
         max-width: 600px;
-        margin-bottom: 21px;
+        margin-bottom: 32px;
     }
 }
 
@@ -96,7 +96,7 @@
 
     @include breakpoint($breakpoints-large) {
         font-size: 72px;
-        line-height: 1.05;
+        line-height: 100px;
     }
 }
 
@@ -125,5 +125,7 @@
 }
 
 .promo__button_fixed {
-    position: fixed;
+    @include breakpoint($breakpoints-large down) {
+        position: fixed;
+    }
 }
